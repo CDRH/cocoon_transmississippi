@@ -1,0 +1,1120 @@
+/* ==|== primary styles =====================================================
+   Author: Karin Dalziel
+   ========================================================================== */
+
+/* FONTS*/
+
+/* @font-face fonts go here */
+
+
+
+
+
+/* =======================================
+Basic HTML Styling 
+==========================================*/
+
+html {
+	background-color: #f4f3ea;
+}
+
+body { 
+	color: #303030;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-size: 16px;
+}
+
+
+
+
+pre {
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	display:inline;
+}
+
+h1, h2, h3, h4, h5, h6, nav {
+	font-family: 'Stint Ultra Expanded', cursive;
+	font-weight: 100;
+	clear: both;
+}
+
+/* h1, h2, h3, h4, h5, h6 */
+
+
+h1, h2, h3, h4, h5, h6 {
+	margin: .2em 0;
+	padding: 0;
+	color: #ac0000;
+}
+
+h2 {
+	font-size: 1.8em;	
+}
+
+h3 {
+	font-size: 1.2em;
+}
+
+h4 {
+	font-size: 1.0em;
+}
+
+h5 {
+	font-size: 1em;
+}
+
+h6
+{
+	font-size: .8em;
+}
+
+table {
+    margin-left:auto; 
+    margin-right:auto;
+    width:100%;
+}
+
+table td {
+	border-top: solid 1px #aaa;
+	padding: 5px 5px;
+	padding-right: 25px;
+}
+
+/* Links */
+
+a {
+	color: #396a78;
+}
+
+a:hover {
+	color: #ac0000;
+}
+
+a:visited {
+	color: #315b67;
+}
+
+.right {
+	float: right;
+	margin: 0 0 10px 10px;
+	clear: right;
+}
+
+
+
+
+/* ====================================
+Page Layout 
+=======================================*/
+
+.header_inner, .main, .footer {
+	margin: auto;
+	padding: 20px 30px;
+	overflow: auto;
+	max-width: 1200px;	
+}
+
+.main {
+	background-color: #fff;
+	border: 1px solid #bec8c1;
+	border-bottom: none;
+	border-top: none;
+}
+
+
+
+/* =====================================
+Header
+======================================== */
+
+
+
+/* Header */
+
+.header{
+	background-color: #e0e2d1;
+	background-image: url(../template/bg_top.png);
+	border-bottom: 1px solid #bec8c0;
+}
+
+.header_inner {
+	background: #c4bb93 url(../template/main_postcard.jpg) no-repeat 0 -140px;
+	background-size:100% auto;
+	border: 1px solid #569063;
+	border-top: none;
+	border-bottom: none;
+	padding: 50px 30px 30px 30px;
+}
+
+
+/* H1 layout */
+
+.header h1 {
+	line-height: 1;
+	font-size: 4em;
+	float:left;
+	-moz-box-shadow: 0px 0px 5px #5c2b22;
+	-webkit-box-shadow: 0px 0px 5px #5c2b22;
+	box-shadow: 0px 0px 5px #5c2b22;
+	/*background-color: RGBA(62, 20, 20,.8);*/
+	background: url(../template/RGBA-62-20-20_8.png) center center;
+	padding: .2em;
+	margin: 0;
+}
+
+/* H1 fonts and colors */
+
+.header h1 a {
+	text-decoration: none;
+}
+
+.header_inner h1 .trans, .header_inner h1 .mississippi, .header_inner h1 .and, .header_inner h1 .dash {
+	color: #fff;
+}
+
+h1 .trans, h1 .mississippi {
+	font-family: 'Stint Ultra Expanded', cursive;
+}
+
+h1 .i_e {
+	display: block;
+	color: #9bcba2;
+	word-spacing: .1em;
+	font: normal normal 1.9em 'Tangerine', cursive;
+	line-height: .55em;
+}
+
+h1 .dash, h1 .and {
+	font-family:'Goudy Bookletter 1911', serif;
+	font-size: 1em;
+	color: #bf021d;
+	padding-left: .1em;
+}
+
+/* Form */
+
+
+.header form {
+	float: right;
+	clear: right;
+	text-align: right;
+	font-size: 1.1em;
+}
+
+.header form .textField {
+	border:none;
+	padding: .3em;
+	margin: 0;
+	border-radius: 0px;
+
+}
+
+.submit {
+	/*background-color: RGBA(255,255,255,.8);*/
+	background: url(../template/RGBA-255-255-255_8.png) center center;
+	border: none;
+	padding: .3em;
+	margin: 0;
+	border-radius: 0;
+}
+
+.nav li a, .textField, .submit {
+	/*background-color: RGBA(255,255,255,.8);*/
+	background: url(../template/RGBA-255-255-255_8.png) center center;
+}
+
+
+
+/* Nav */
+
+.nav {
+	width:33%;
+	float: right;
+	clear: right;
+	margin-top: 1em;
+	font-size: 1.2em;
+	overflow: auto;
+}
+
+.nav ul{
+	text-align: right;
+	margin: 0px;
+	padding: 0 0 10px 0;
+	overflow: auto;
+	/* height:300px; */
+}
+
+.nav ul li {
+	display: inline-block;
+	zoom: 1; /* stupid ie7 */
+    *display: inline; /* stupid ie7 */
+	padding: .2em 0em 0em .3em;
+	line-height: 2em;
+}
+
+.nav ul li a:hover {
+	background: #ac0000;
+	color: #fff;
+	border: none;
+}
+
+.nav ul li a:visited {
+	/*background-color: #ac0000;*/
+	/*color: #396a78;*/
+}
+
+.nav ul li a {
+	padding: .3em .6em .3em .6em;
+	white-space: nowrap;
+	text-decoration:none;
+	color: #000;
+	/*border: 1px solid #ccc;*/
+	border: none;
+}
+
+.selected {
+	background: #ccc;
+}
+
+
+/* Page selectors */
+.home #nav a.home,
+.photographs #nav a.photographs,
+.memorabilia #nav a.memorabilia,
+.texts #nav a.texts,
+.commentary #nav a.commentary,
+.about #nav a.about {
+	/*background-color: RGBA(62, 20, 20,.8);*/
+	background: url(../template/RGBA-62-20-20_8.png) center center;
+	color: #fff;
+}
+
+/* subpage selectors */
+.home.subpage #nav a.home,
+.photographs.subpage #nav a.photographs,
+.memorabilia.subpage #nav a.memorabilia,
+.texts.subpage #nav a.texts,
+.commentary.subpage #nav a.commentary,
+.about.subpage #nav a.about {
+	/*background-color: RGBA(62, 20, 20,.7);*/
+	background: url(../template/RGBA-62-20-20_8.png) center center;
+	color: #fff;
+}
+
+/* Hover rule for subpages */
+.home.subpage #nav a:hover.home,
+.photographs.subpage #nav a:hover.photographs,
+.memorabilia.subpage #nav a:hover.memorabilia,
+.texts.subpage #nav a:hover.texts,
+.commentary.subpage #nav a:hover.commentary,
+.about.subpage #nav a:hover.about {
+	background-color: #ac0000;
+	color: #fff;
+}
+
+
+
+
+/* ===========================================
+Footer 
+============================================== */
+
+.footer {
+	clear: both;
+	padding: 30px;
+	padding-bottom: 120px;
+	text-align: right;
+	background-color: #dfe5dc;
+	border: 1px solid #bec8c0;
+}
+
+.footerinfo {
+    font-size: .9em;
+    font-weight: normal;
+    color: #000;
+}
+
+.footerinfo a {
+    color: #000;
+}
+
+.footer img.right {
+ clear: none;
+ float: none;
+}
+
+/* View options */
+
+.callout p.view_choices {
+	float: left;
+	margin-right: 2em;
+}
+
+.view_choices a, .sort_choices a {
+	padding: .2em;
+}
+
+p.search_descriptor {
+	float: left;
+	font-size: 1.2em;
+	padding: 0;
+	margin: 10px 0 0 0;
+}
+
+
+/* Pagination */
+
+div.pagination {
+	
+}
+
+.pagination {
+	float: right;
+}
+
+.pagination, .searchSort {
+	padding:  10px 0;
+}
+
+.paginationJump {
+	width: 3em;
+	border: 1px solid #aaa;
+	margin: 0;
+	padding: .2em;
+	border-radius: 0px;
+}
+
+.pagination input.submit {
+	border: 1px solid #aaa;
+	background-color: #faf8ef;
+	margin: 0 0 0 -1px;
+	padding: .2em;
+}
+
+form.jumpForm {
+	display: inline;
+}
+
+/* Sub categories and keywords */
+
+ul.sub_categories, ul.keywords {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
+ul.sub_categories li, ul.keywords li {
+	display: inline;
+}
+
+ul.sub_categories li a, ul.keywords li a {
+	float: left;
+	margin: 0 20px 20px 0;
+	text-decoration: none;
+	color: #fff;
+	background-color: #451818;
+	border-radius: 15px;
+	padding: 0 0px;
+	display: inline;
+}
+
+ul.keywords li a {
+	padding: 0 10px;
+}
+
+.shade {
+	display: block;
+	border-radius: 15px;
+	padding: 1px 10px;
+}
+
+
+
+ul.sub_categories li a:hover, ul.keywords li a:hover {
+	background-color: #ae020c;
+}
+
+ul.sub_categories li a .name {
+	margin: 0 1.5em 0px -10px;
+	padding: 10px 10px 0 10px;
+	font-size: 1.2em;	
+	text-shadow: 0px 0px 2px #000000;
+}
+
+ul.sub_categories li a .number {
+	padding-top: 5px;
+	display: block;
+	text-align: right;
+	text-decoration: none;
+	margin: 0 -.05em -.1em 0;
+	font: bold 3em 'Stint Ultra Expanded', serif;
+}
+
+ul.keywords li a .name {
+	margin-right: 1em;
+}
+
+.memorabilia a:hover .shade,
+.photographs a:hover .shade,
+.texts a:hover .shade {
+	/*background-color: RGBA(0,0,0,.4);*/
+	background: url(../template/RGBA-62-20-20_8.png) center center;
+}
+
+ /* Photographs icons */ 
+
+
+li.bluff_tract a {
+	background: url(../template/TMI00236.jpg) center center;
+}
+
+li.east_midway a {
+	background: url(../template/TMI00291.jpg) center center;
+}
+
+li.grand_court a {
+	background: url(../template/TMI00298.jpg) 0 -30px;
+}
+
+li.fine_arts_exhibit a {
+	background: url(../template/TMI00012.jpg) center center;
+}
+
+li.indian_congress a {
+	background: url(../template/TMI00493.jpg) center center;
+}
+
+li.north_midway a {
+	background: url(../template/TMI00360.jpg) center center;
+}
+
+li.transportation a {
+	background: url(../template/TMI00639.jpg) center center;
+}
+
+li.miscellaneous a {
+	background: url(../template/TMI03085.jpg) center center;
+}
+
+li.exhibits a {
+	background: url(../template/TMI00628.jpg) center center;
+}
+
+li.midway a {
+	background: url(../template/TMI00291.jpg) center center;
+}
+
+li.special_events a {
+	background: url(../template/TMI00598.jpg) center center;
+} 
+
+li.studio_portraits a {
+	background: url(../template/TMI02472.jpg) center center;
+} 
+
+
+/* Memorabila icons */ 
+
+.memorabilia .shade {
+	/*background-color: RGBA(0,0,0,.4);*/
+	background: url(../template/RGBA-0-0-0_4.png) center center;
+}
+
+li.administrative_documents a {
+	background: url(../template/TMI04435-001.jpg) center center;
+}
+
+li.correspondence a {
+	background: url(../template/TMI04583.jpg) center center;
+}
+
+li.ephemera a {
+	background: url(../template/TMI05026.jpg) center center;
+}
+
+li.illustrations a {
+	background: url(../template/TMI05032.jpg) center center;
+}
+
+li.invitations a {
+	background: url(../template/TMI04273.jpg) center center;
+}
+
+li.news_clippings a {
+	background: url(../template/TMI04458.jpg) center center;
+}
+
+li.scrapbooks a {
+	background: url(../template/TMI04534-001.jpg) center center;
+}
+
+li.souvenir_books a {
+	background: url(../template/TMI04588-001.jpg) center center;
+}
+
+li.stock_certificates a {
+	background: url(../template/TMI05041.jpg) center center;
+}
+
+li.tickets a {
+	background: url(../template/TMI04563-013.jpg) center center;
+}
+
+li.wattles_investigation a {
+	background: url(../template/TMI04038-001.jpg) center center;
+}
+
+
+/* Texts icons */ 
+
+.texts .shade {
+	/*background-color: RGBA(0,0,0,.4);*/
+	background: url(../template/RGBA-0-0-0_4.png) center center;
+}
+
+li.books a {
+	background: url(../template/transmiss.book.tmie.1898.001.jpg) top center;
+}
+
+
+li.government_documents a {
+	background: url(../template/transmiss.mckinley.1897.001.jpg) center center;
+}
+
+li.newspapers a {
+	background: url(../template/transmiss.news.owh.19800524.001.jpg) center center;
+}
+
+li.periodicals a {
+	background: url(../template/transmiss.haynes.1898.001.jpg) center center;
+}
+
+ 
+ 
+
+ /* List Search results listing*/ 
+ 
+ .searchresults {
+	overflow: auto;
+	clear: both;
+}
+
+
+div.thumbnail_listing {
+	margin-top: 10px;
+	clear: both;
+	overflow: auto;
+}
+
+div.thumbnail_listing span.thumbnail_div {
+	width: 145px;
+	display: block;
+	float: left;
+	margin-right: 10px;
+	text-align: right;
+	margin-left: 20px;
+}
+
+div.thumbnail_listing span.thumbnail_div img {
+	/*margin-top: 3px;*/
+	margin-top:-15px;
+	border: 5px solid #e0e2d2;
+}
+
+div.thumbnail_listing a {
+	border-top: 20px solid #ececec;
+	display: block;
+	/*padding-top: 10px;*/
+	font-size: 1.2em;
+	border-color: #e0e2d2;
+}
+
+div.thumbnail_listing p {
+	margin: 10px 0 0 10px;
+	
+}
+
+ /*Gallery result listing*/ 
+
+div.thumbnail_listing_images {
+	overflow: auto;
+	float: left;
+	position: relative;
+	margin: 0 15px 15px 0;
+}
+
+div.thumbnail_listing_images span.thumbnail_div {
+	display: block;
+	float: left;
+	min-width: 140px;
+	background-color: #aaa;
+	text-align: center;
+}
+
+div.thumbnail_listing_images span.thumbnail_div img {
+	margin: 0;
+}
+
+div.thumbnail_listing_images a {
+	color: #000;
+}
+
+div.thumbnail_listing_images:hover a {
+	color: #ae020c;
+}
+
+div.thumbnail_listing_images p {
+	position: absolute;
+	width: 140px;
+	/*background-color: RGBA(250, 250, 250,.7);*/
+	background: url(../template/RGBA-250-250-250_7.png) center center;
+	
+	font-size: .9em;
+	bottom: 0px;
+	margin: 0;
+	width:100%
+}
+
+div.thumbnail_listing_images a:hover p {
+	display: block;
+}
+
+
+/*Home Page*/
+
+ul.home_container {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.home_container li {
+	display: block;
+	width: 33%;
+	float: left;
+	
+}
+
+.home_container li a {
+	
+	padding: .3em .2em .2em .2em;
+	display: block;
+	font: normal normal 5em 'Tangerine', cursive;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	height: 1.2em;
+	text-shadow: 2px 2px 4px #000;
+	
+	
+}
+
+.home_container li a:hover {
+	color: #be001b;
+	text-shadow: 2px 2px 4px #fff;
+	
+}
+
+.home_container li.home_photographs a {
+	margin: 0 .1em .2em 0em;
+	background-color: red;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-left-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	border-top-left-radius: 10px;
+	background: #c4bb93 url(../template/home_photographs.jpg) no-repeat 0 0px;
+}
+
+.home_container li.home_memorabilia a {
+	margin: 0 .1em .2em .1em;
+	background-color: green;
+	background: #c4bb93 url(../template/home_memorabilia.jpg) no-repeat 0 0px;
+}
+
+.home_container li.home_texts a {
+	margin: 0 0 .2em .1em;
+	background-color: blue;
+	-moz-border-radius-topright: 10px;
+	border-top-right-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	border-bottom-right-radius: 10px;
+	background: #c4bb93 url(../template/home_texts.jpg) no-repeat 0 0px;
+}
+
+.home blockquote {
+	font: normal normal 1.2em 'Stint Ultra Expanded', cursive;
+	line-height: 1.4;
+	background-color: #f0eee2;
+	margin: 0;
+	padding: 1em 2em;
+	-moz-border-radius-bottomleft: 30px;
+	border-bottom-left-radius: 30px;
+	-moz-border-radius-bottomleft: 30px;
+	border-top-right-radius: 30px;
+	-moz-border-radius-bottomright: 30px;
+	border-bottom-right-radius: 30px;
+	border: 15px double #fff;
+}
+
+/* Memorabilia */
+
+.memorabilia pre {
+	clear: both;
+	display: block;
+}
+
+
+
+/* ==================================================
+Internal Page layout and display
+todo: add classes
+=====================================================*/
+
+.alignright {
+	border: #aaa solid 1px;
+	margin: 0 0 10px 10px;
+	float: right;
+}
+
+/*
+.mainpage .intro_content {
+	width: 580px;
+	float: right;
+}
+
+.mainpage .main_content {
+	width: 580px;
+	float: left;
+}
+
+.home .mainpage .intro_content,
+.about .mainpage .intro_content,
+.home .mainpage .main_content,
+.about .mainpage .main_content {
+	width:auto;
+	float:none;
+}
+*/
+
+/* Page images (texts) */
+
+span.pageimage {
+	border: 1px solid #aaa;
+	margin: 0;
+	padding: 0;
+	float: right;
+	clear: both;
+	margin: -2px 0 10px 10px;
+}
+
+.hr {
+    border-top: solid 1px #aaa;
+	display: block;
+	height: 1px;
+	margin: 10px 0 0 0;
+	padding: 0px 0 0 0;
+	clear: right;
+}
+
+
+/* Tooltips and switch boxes */
+
+#tooltip {
+	position: absolute;
+	z-index: 9999;
+	color: #000;
+	font-size: .9em;
+	background-color: #fff;
+	border: 1px solid #aaa;
+	text-decoration: none;
+	font-weight: normal;
+	font-style: normal;
+	padding: 10px;
+	text-align: left;
+	-moz-box-shadow: 5px 5px 5px #aaa;
+	-webkit-box-shadow: 5px 5px 5px #aaa;
+	box-shadow: 5px 5px 5px #aaa;
+	line-height: 1.4;
+	max-width: 400px;
+}
+
+#tooltip.inlinenote {
+	max-width: 400px !important;
+}
+
+a #tooltip {
+	text-decoration: none;
+}
+
+a.sic, a.orig {
+	text-decoration: none !important;
+	border-bottom: 1px dotted #939393;
+}
+
+
+
+/* Metadata and callouts display */
+
+.callout li {
+	list-style-type: none;
+}
+
+.callout {
+	border: 1px solid #bec8c0;
+	background-color: #faf8ef;
+	margin: .5em 0 .5em 0;
+	padding: 5px 15px;
+	clear: both;
+	overflow: auto;
+}
+
+.callout .selected {
+	border: 1px solid #d9d8db;
+	background-color: #ffffff;
+	text-decoration:none;
+}
+
+.callout p {
+	margin: .2em;
+}
+
+
+
+
+
+/* ==================================================
+Begin Media Queries
+=====================================================*/
+
+
+
+@media only screen and (max-width: 1230px) {  
+
+/*body {
+	background-color: green;
+}*/
+
+.header h1 {
+	font-size: 3em;
+	margin: 0;
+}
+.mainpage .intro_content {
+	width: 100%;
+	float: none;
+}
+
+.mainpage .main_content {
+	width: 100%;
+	float: none;
+	/*width: 100%;*/
+}
+
+/*.header_inner {
+	background: blue;
+}*/
+
+}
+
+
+@media only screen and (max-width: 69em) {  
+
+
+
+.home_container li a {
+	font: normal normal 4em 'Tangerine', cursive;
+
+}
+
+
+
+	.header h1 {
+		font-size: 2.7em;
+		margin: 0;
+	}
+	
+
+
+
+}
+
+
+
+
+@media only screen and (max-width: 60em) {  
+
+
+
+.header {
+	font-size: .8em;
+}
+
+
+
+
+}
+
+@media only screen and (max-width: 55em) {  
+
+
+
+ul.home_container {
+	
+}
+
+.home_container li {
+	display: block;
+	float: none;
+	max-width: 405px;
+	width: auto;
+	
+}
+
+.home_container li a {
+	font: normal normal 4em 'Tangerine', cursive;
+
+}
+
+
+
+	.header h1 {
+		font-size: 2.7em;
+		margin: 0;
+	}
+	
+	.home_container li.home_photographs a {
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	margin: 0 .1em .2em 0em;
+
+}
+
+.home_container li.home_memorabilia a {
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	margin: 0 .1em .2em 0em;
+
+}
+
+.home_container li.home_texts a {
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	margin: 0 .1em .2em 0em;
+
+}
+
+
+.header h1 {
+	font-size: 1.7em;
+}
+
+.header form, .nav {
+	float: left;
+	clear: both;
+	width: 100%;
+	display: block;
+	text-align: left;
+}
+
+.nav ul li {
+	float: left;
+}
+
+.header form {
+	padding-top: 10px;
+}
+
+.header {
+	font-size: .9em;
+}
+
+.header_inner {
+	background: #c4bb93 url(../template/main_postcard.jpg) no-repeat 0 0px;
+	background-size:100% auto;
+	padding: 10px 10px 10px 10px;
+}
+
+.main {
+	padding: 10px;
+}
+
+div.thumbnail_listing {
+	margin-top: .2em;
+}
+
+div.thumbnail_listing span.thumbnail_div {
+	width: 125px;
+	margin-left: 0px;
+}
+
+div.thumbnail_listing span.thumbnail_div img {
+	margin-top:-8px;
+	border: solid 2px #e0e2d3;
+}
+
+div.thumbnail_listing a {
+	border-top: 10px solid #e0e2d3;
+	font-size: 1em;
+}
+
+div.thumbnail_listing p {
+	margin: 0px 0 0 135px;
+
+	
+}
+
+/*.header_inner {
+	background: blue;
+}*/
+
+.callout {
+	padding: .2em;
+}
+
+
+/* ==|== non-semantic helper classes ========================================
+   Please define your styles before this section.
+   ========================================================================== */
+
+/* For image replacement */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
+.ir br { display: none; }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden { display: none !important; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Contain floats: h5bp.com/q */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+
+
+/* ==|== print styles =======================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}

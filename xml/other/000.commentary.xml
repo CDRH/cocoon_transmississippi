@@ -1,0 +1,19 @@
+<html>
+    
+<body>
+
+<h2>Commentary</h2>
+    <p>Explanatory text will go here.</p>
+    
+    <p>Commentary section will eventually contain:</p>
+    <ul>
+        <li>Exhibits</li>
+        <li>Essays</li>
+        <li>Timeline</li>
+        <li>Bibliography</li>
+        <li>Annotated Links</li>
+    </ul>
+    
+    <a href="posts.html">Link to blog posts</a>
+</body>
+</html>

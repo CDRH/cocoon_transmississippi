@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+
+<map:sitemap xmlns:map="http://apache.org/cocoon/sitemap/1.0">
+    <map:components>
+        <map:generators default="file"/>
+        <map:transformers default="xslt"/>
+        <map:serializers default="xhtmlutf8">
+            <map:serializer logger="sitemap.serializer.xhtml" mime-type="text/html" name="xhtmlutf8" pool-grow="2" pool-max="64" pool-min="2" src="org.apache.cocoon.serialization.XMLSerializer">
+                <doctype-public>-//W3C//DTD XHTML 1.0 Transitional//EN</doctype-public>
+                <doctype-system>http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</doctype-system>
+                <encoding>US-ASCII</encoding>
+                <omit-xml-declaration>yes</omit-xml-declaration>
+                <indent>no</indent>
+            </map:serializer>
+        </map:serializers>
+        <map:selectors default="browser"/>
+        
+        <map:matchers default="wildcard"/>
+        
+    </map:components>
+    
+    <map:pipelines>
+        
+        <map:component-configurations>
+            
+        </map:component-configurations>
+        
+        <map:pipeline>
+            
+            <!-- Main Page (/ or index.html) -->
+            
+            <map:match pattern="^(index.html)?$" type="regexp">
+                <map:generate src="xml/other/000.home.xml" />
+                <map:transform src="stylesheets/xslt/tei.p5.xsl">
+                    <map:parameter name="pagetype" value="home"/>
+                    <map:parameter name="subpagetype" value=""/>
+                    <map:parameter name="pageid" value=""/>
+                </map:transform>
+                <map:serialize type="xhtmlutf8" />
+            </map:match>
+            
+            <map:match pattern="photographs/view/*.html">
+                <map:generate src="xml/other/000.photographs.xml" />
+                <map:transform src="stylesheets/xslt/tei.p5.xsl">
+                    <map:parameter name="pagetype" value="photographs"/>
+                    <map:parameter name="subpagetype" value="item"/>
+                    <map:parameter name="pageid" value="{1}"/>
+                </map:transform>
+                <map:serialize type="xhtmlutf8" />
+            </map:match>
+            
+            <map:match pattern="texts/view/*.html">
+                <map:generate src="xml/documents/{1}.xml" />
+                <map:transform src="stylesheets/xslt/tei.p5.xsl">
+                    <map:parameter name="pagetype" value="texts"/>
+                    <map:parameter name="subpagetype" value="item"/>
+                    <map:parameter name="pageid" value="{1}"/>
+                </map:transform>
+                <map:serialize type="xhtmlutf8" />
+            </map:match>
+            
+            <map:match pattern="memorabilia/view/*.html">
+                <map:generate src="xml/other/000.memorabilia.xml" />
+                <map:transform src="stylesheets/xslt/tei.p5.xsl">
+                    <map:parameter name="pagetype" value="memorabilia"/>
+                    <map:parameter name="subpagetype" value="item"/>
+                    <map:parameter name="pageid" value="{1}"/>
+                </map:transform>
+                <map:serialize type="xhtmlutf8" />
+            </map:match>
+            
+            <map:match pattern="search/*/index.html">
+                <map:generate src="xml/other/000.search.xml" />
+                <map:transform src="stylesheets/xslt/tei.p5.xsl">
+                    <map:parameter name="use-request-parameters" value="true" />
+                    <map:parameter name="q" value="*:*"/>
+                    <map:parameter name="pagetype" value="search"/> 
+                    <map:parameter name="subpagetype" value="{1}"/>
+                </map:transform>
+                <map:serialize type="xhtmlutf8" />
+            </map:match>
+            
+            <map:match pattern="search/*/">
+                <map:generate src="xml/other/000.search.xml" />
+                <map:transform src="stylesheets/xslt/tei.p5.xsl">
+                    <map:parameter name="use-request-parameters" value="true" />
+                    <map:parameter name="q" value="*:*"/>
+                    <map:parameter name="pagetype" value="search"/> 
+                    <map:parameter name="subpagetype" value="{1}"/>
+                </map:transform>
+                <map:serialize type="xhtmlutf8" />
+            </map:match>
+            
+            <map:match pattern="*/*.html">
+                <map:generate src="xml/other/000.{1}.xml" />
+                <map:transform src="stylesheets/xslt/tei.p5.xsl">
+                    <map:parameter name="use-request-parameters" value="true" />
+                    <map:parameter name="pagetype" value="{1}"/>
+                    <map:parameter name="subpagetype" value="{2}"/>
+                    <map:parameter name="pageid" value=""/>
+                </map:transform>
+                <map:serialize type="xhtmlutf8" />
+            </map:match>
+            
+            <map:match pattern="*.html">
+                <map:generate src="xml/other/000.{1}.xml" />
+                <map:transform src="stylesheets/xslt/tei.p5.xsl">
+                    <map:parameter name="use-request-parameters" value="true" />
+                    <map:parameter name="pagetype" value="{1}"/>
+                    <map:parameter name="subpagetype" value=""/>
+                    <map:parameter name="pageid" value=""/>
+                </map:transform>
+                <map:serialize type="xhtmlutf8" />
+            </map:match>
+            
+
+            
+            <!-- Individual XML file display (in XML) -->
+            
+          
+            
+            <map:match pattern="*/**/***.xml">
+                <map:read src="xml/documents/{3}.xml"/>
+            </map:match>
+            
+            <map:match pattern="*/**.xml">
+                <map:read src="xml/documents/{2}.xml"/>
+            </map:match>
+            
+            <map:match pattern="files/css/**">
+                <map:read src="files/css/{1}"/>
+            </map:match>
+            
+            <map:match pattern="files/template/**">
+                <map:read src="files/template/{1}"/>
+            </map:match>
+            
+            <map:match pattern="files/js/**">
+                <map:read src="files/js/{1}"/>
+            </map:match>
+            
+            <map:match pattern="figures/**">
+                <map:read src="figures/{1}"/>
+            </map:match>
+            
+            <map:match pattern="*">
+                <map:read src="{1}"/>
+            </map:match>
+            
+            
+        </map:pipeline>
+    </map:pipelines>
+</map:sitemap>

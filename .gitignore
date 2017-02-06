@@ -1,0 +1,12 @@
+*.svn
+figures/*
+audio/*
+config.xsl
+post.py
+data_transmississippi/*
+search/*
+images/figures/*
+
+
+
+.DS_Store
