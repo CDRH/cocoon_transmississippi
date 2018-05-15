@@ -8,5 +8,5 @@
     -->
     <xsl:variable name="siteroot">http://trans-mississippi.unl.edu/</xsl:variable>
     <xsl:variable name="searchroot">http://localhost:8983/solr/non_api_transmiss/select/?version=2.2&amp;indent=on</xsl:variable>
-
+    <xsl:variable name="externalfileroot">http://trans-mississippi.unl.edu/figures/</xsl:variable>
 </xsl:stylesheet>
