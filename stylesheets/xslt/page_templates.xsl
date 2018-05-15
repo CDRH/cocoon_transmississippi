@@ -525,10 +525,10 @@
                                                 </xsl:choose>
                                                 <xsl:text>/</xsl:text>
                                             <xsl:value-of select="str[@name='id']"/>
-                                            <xsl:if test="str[@name='pages'] != ''">
+                                            <xsl:if test="str[@name='pages'] != '' or str[@name='sub_category'] = 'scrapbooks'">
                                                 <xsl:text>-001</xsl:text>
                                             </xsl:if>
-                                            <xsl:if test="str[@name='category'] = 'texts'">
+                                            <xsl:if test="str[@name='category'] = 'texts' and str[@name='sub_category'] != 'scrapbooks'">
                                                 <xsl:text>.001</xsl:text>
                                             </xsl:if>
                                             <xsl:text>.jpg</xsl:text>  
