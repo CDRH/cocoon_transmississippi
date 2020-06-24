@@ -7,6 +7,7 @@ data_transmississippi/*
 search/*
 images/figures/*
 
-
+# documents are pulled from data repo, do not track
+documents/
 
 .DS_Store
