@@ -28,7 +28,9 @@
                 
                 <!--<link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Marcellus' rel='stylesheet' type='text/css'/>-->
                 <!--<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>-->
-                <link href="http://fonts.googleapis.com/css?family=Rokkitt|Tangerine|Stint+Ultra+Expanded|Goudy+Bookletter+1911" rel="stylesheet" type="text/css" />
+                <!--<link href="http://fonts.googleapis.com/css?family=Rokkitt|Tangerine|Stint+Ultra+Expanded|Goudy+Bookletter+1911" rel="stylesheet" type="text/css" />-->
+                <link rel="preconnect" href="https://fonts.gstatic.com" />
+                <link href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&amp;family=Rokkitt&amp;family=Stint+Ultra+Expanded&amp;family=Tangerine&amp;display=swap" rel="stylesheet" /> 
                     
                 <link href="{$siteroot}files/css/reset.css" rel="stylesheet" type="text/css"/> 
                 <link href="{$siteroot}files/css/style.css" rel="stylesheet" type="text/css"/>
