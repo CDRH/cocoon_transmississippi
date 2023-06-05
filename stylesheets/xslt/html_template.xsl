@@ -43,7 +43,7 @@
                 <script src="{$siteroot}files/js/prettyPhoto_compressed_3.1.3/js/jquery.prettyPhoto.js"> &#160; </script>
                                 
                 <script src="{$siteroot}files/js/script.js"> &#160; </script>
-                <script async src="https://www.googletagmanager.com/gtag/js?id=G-M1S6YLPYCQ">&#160; <:/script>
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-M1S6YLPYCQ">&#160; </script>
                 <!-- Expand Text -->
                 <!--<script type="text/javascript">
                     function unhide(divID) {
