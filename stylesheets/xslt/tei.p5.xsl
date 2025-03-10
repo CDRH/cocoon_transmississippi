@@ -368,6 +368,17 @@
             <xsl:attribute name="class">
               <xsl:text>display</xsl:text>
             </xsl:attribute>
+            <xsl:attribute name="alt">
+                <xsl:choose>
+                    <xsl:when test="@n='unnumbered'">
+                        <xsl:text>Scanned image of unnumbered page</xsl:text>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:text>Scanned image of page </xsl:text>
+                        <xsl:value-of select="@n"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:attribute>
           </img>
         </a>
       </span>
