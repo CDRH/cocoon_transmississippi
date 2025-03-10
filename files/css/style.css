@@ -146,22 +146,10 @@ Header
 	padding: 50px 30px 30px 30px;
 }
 
-/* .header_inner{
-  display: flex;
-}
-
-.header_inner > h1 {
-  flex-grow: 0;
-}
-
-.header_inner nav {
-  width: auto;
-} */
-
 
 /* H1 layout */
 
-.header h1 {
+.header .site-title {
 	line-height: 1;
 	font-size: 4em;
 	float:left;
@@ -176,19 +164,19 @@ Header
 
 /* H1 fonts and colors */
 
-.header h1 a {
+.header .site-title a {
 	text-decoration: none;
 }
 
-.header_inner h1 .trans, .header_inner h1 .mississippi, .header_inner h1 .and, .header_inner h1 .dash {
+.header_inner .site-title .trans, .header_inner .site-title .mississippi, .header_inner .site-title .and, .header_inner .site-title .dash {
 	color: #fff;
 }
 
-h1 .trans, h1 .mississippi {
+.site-title .trans, .site-title .mississippi {
 	font-family: 'Stint Ultra Expanded', cursive;
 }
 
-h1 .i_e {
+.site-title .i_e {
 	display: block;
 	color: #9bcba2;
 	word-spacing: .1em;
@@ -196,7 +184,7 @@ h1 .i_e {
 	line-height: .55em;
 }
 
-h1 .dash, h1 .and {
+.site-title .dash, .site-title .and {
 	font-family:'Goudy Bookletter 1911', serif;
 	font-size: 1em;
 	color: #bf021d;
@@ -912,7 +900,7 @@ Begin Media Queries
 	background-color: green;
 }*/
 
-.header h1 {
+.header .site-title {
 	font-size: 3em;
 	margin: 0;
 }
@@ -945,7 +933,7 @@ Begin Media Queries
 
 
 
-	.header h1 {
+	.header .site-title {
 		font-size: 2.7em;
 		margin: 0;
 	}
@@ -989,7 +977,7 @@ Begin Media Queries
 
 
 
-	.header h1 {
+	.header .site-title {
 		font-size: 2.7em;
 		margin: 0;
 	}
@@ -1016,7 +1004,7 @@ Begin Media Queries
 }
 
 
-.header h1 {
+.header .site-title {
 	font-size: 1.7em;
 }
 

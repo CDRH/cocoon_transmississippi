@@ -84,7 +84,7 @@
                         <div class="page-wrapper">
                           <div class="header_inner">
                               <!-- Link takes one back to home page by clicking title -->
-                              <h1>
+                              <div class="site-title">
                                   <a href="{$siteroot}">
                                       <span class="trans">Trans</span>
                                       <span class="dash">-</span>
@@ -92,13 +92,8 @@
                                       <span class="and">&amp;</span>
                                       <span class="i_e">International Exposition</span>
                                   </a>
-                              </h1>
-                              <form action="{$siteroot}search/all/" method="get"
-                                  enctype="application/x-www-form-urlencoded">
-                                  <input id="basic-q" type="text" name="q" value="" class="textField"/>
-                                  <input type="submit" value="Search" class="submit"/>
-                              </form>
-                              <div id="nav" class="nav">
+                              </div>
+                              <nav id="nav" class="nav">
                                   <ul>
                                       <li>
                                           <a class="home" href="{$siteroot}">Home</a>
@@ -118,7 +113,7 @@
                                           <a class="about" href="{$siteroot}about.html">About</a>
                                       </li>
                                   </ul>
-                              </div>
+                              </nav>
                               <!-- /nav -->
                           </div>
                         </div>
