@@ -146,6 +146,18 @@ Header
 	padding: 50px 30px 30px 30px;
 }
 
+/* .header_inner{
+  display: flex;
+}
+
+.header_inner > h1 {
+  flex-grow: 0;
+}
+
+.header_inner nav {
+  width: auto;
+} */
+
 
 /* H1 layout */
 
@@ -228,7 +240,7 @@ h1 .dash, h1 .and {
 /* Nav */
 
 .nav {
-	width:33%;
+	width:40%;
 	float: right;
 	clear: right;
 	margin-top: 1em;
@@ -242,6 +254,10 @@ h1 .dash, h1 .and {
 	padding: 0 0 10px 0;
 	overflow: auto;
 	/* height:300px; */
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
 }
 
 .nav ul li {
@@ -1010,6 +1026,12 @@ Begin Media Queries
 	width: 100%;
 	display: block;
 	text-align: left;
+}
+
+.header .nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
 }
 
 .nav ul li {
