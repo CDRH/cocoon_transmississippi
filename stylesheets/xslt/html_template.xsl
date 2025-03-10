@@ -162,10 +162,10 @@
                           <!-- /footerinfo -->
                           <div class="icons">
                               <a href="http://www.omahapubliclibrary.org/">
-                                  <img src="{$siteroot}files/template/opl_logo.png" class="right"/>
+                                  <img src="{$siteroot}files/template/opl_logo.png" class="right" alt="Omaha Public Library" />
                               </a>
                               <a href="http://www.unl.edu/">
-                                  <img src="{$siteroot}files/template/unl_logo.png" class="right"/>
+                                  <img src="{$siteroot}files/template/unl_logo.png" class="right" alt="University of Nebraska-Lincoln" />
                               </a>
                           </div>
                           <!-- /icons -->
