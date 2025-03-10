@@ -516,7 +516,7 @@
                                 </xsl:attribute>
                                 
                                 <span class="thumbnail_div">
-                                    <img>
+                                    <img role="presentation" alt="">
                                         <xsl:attribute name="src">
                                             <xsl:value-of select="$externalfileroot"/>
                                                 <xsl:choose>
