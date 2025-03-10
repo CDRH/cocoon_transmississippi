@@ -247,7 +247,7 @@ h1 .dash, h1 .and {
 .nav ul li {
 	display: inline-block;
 	zoom: 1; /* stupid ie7 */
-    *display: inline; /* stupid ie7 */
+  display: inline; /* stupid ie7 */
 	padding: .2em 0em 0em .3em;
 	line-height: 2em;
 }
@@ -690,15 +690,14 @@ ul.home_container {
 }
 
 .home_container li {
-	display: block;
 	width: 33%;
 	float: left;
 	
 }
-
 .home_container li a {
 	
 	padding: .3em .2em .2em .2em;
+  position: relative;
 	display: block;
 	font: normal normal 5em 'Tangerine', cursive;
 	text-align: center;
@@ -706,13 +705,11 @@ ul.home_container {
 	color: #fff;
 	height: 1.2em;
 	text-shadow: 2px 2px 4px #000;
-	
-	
 }
 
 .home_container li a:hover {
 	color: #be001b;
-	text-shadow: 2px 2px 4px #fff;
+	text-shadow: 2px 2px 4px #fff, -2px 2px 4px #fff, -2px -2px 4px #fff, 2px -2px 4px #fff;
 	
 }
 
@@ -724,6 +721,7 @@ ul.home_container {
 	-moz-border-radius-topleft: 10px;
 	border-top-left-radius: 10px;
 	background: #c4bb93 url(../template/home_photographs.jpg) no-repeat 0 0px;
+	text-shadow: 2px 2px 4px #000, -2px 2px 8px #000, -2px -2px 4px #000, 2px -2px 4px #000;
 }
 
 .home_container li.home_memorabilia a {
@@ -731,6 +729,9 @@ ul.home_container {
 	background-color: green;
 	background: #c4bb93 url(../template/home_memorabilia.jpg) no-repeat 0 0px;
 }
+
+
+
 
 .home_container li.home_texts a {
 	margin: 0 0 .2em .1em;
@@ -957,11 +958,6 @@ Begin Media Queries
 @media only screen and (max-width: 55em) {  
 
 
-
-ul.home_container {
-	
-}
-
 .home_container li {
 	display: block;
 	float: none;
@@ -1059,8 +1055,6 @@ div.thumbnail_listing a {
 
 div.thumbnail_listing p {
 	margin: 0px 0 0 135px;
-
-	
 }
 
 /*.header_inner {
@@ -1070,6 +1064,7 @@ div.thumbnail_listing p {
 .callout {
 	padding: .2em;
 }
+}
 
 
 /* ==|== non-semantic helper classes ========================================
@@ -1077,7 +1072,7 @@ div.thumbnail_listing p {
    ========================================================================== */
 
 /* For image replacement */
-.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; line-height: 0; }
 .ir br { display: none; }
 
 /* Hide from both screenreaders and browsers: h5bp.com/u */
@@ -1095,7 +1090,7 @@ div.thumbnail_listing p {
 /* Contain floats: h5bp.com/q */
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
-.clearfix { *zoom: 1; }
+.clearfix { zoom: 1; }
 
 
 
