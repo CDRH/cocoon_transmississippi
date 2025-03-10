@@ -81,6 +81,12 @@
                 </xsl:if>
 
                     <header id="header" class="header">
+                        <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
+                        <div class="static-banner-wrapper">
+                          <div class="static-banner">
+                            <p>This version of the website was created in 2025. See the <a href="/info.html">Site Information Page</a> for contact information, data downloads, and other details.</p>
+                          </div>
+                        </div>
                         <div class="page-wrapper">
                           <div class="header_inner">
                               <!-- Link takes one back to home page by clicking title -->

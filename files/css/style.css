@@ -1123,3 +1123,66 @@ div.thumbnail_listing p {
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 }
+
+/* /////////////////
+Accessibility Fixes
+///////////////// */
+
+/* Skip to main content link */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
+a.sr-only-focusable:hover, a.sr-only-focusable:focus {
+  color: #345c87;
+  text-decoration: underline;
+}
+
+.static-banner-wrapper {
+  background-color: #cce5f2;
+  border-bottom: 1px solid #226e95;
+}
+
+.static-banner {
+  margin: auto;
+  max-width: 100%; /* Change this to the width of the page content */
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.static-banner p {
+  font-size: 14px; /* Change to fit site */
+  margin: 0;
+}
+
+.static-banner p a,
+.static-banner p a:visited {
+  color: #0000EE;
+  background: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.static-banner p a:hover {
+  background: none;
+  color: #010194;
+  margin: 0;
+  padding: 0;
+}
