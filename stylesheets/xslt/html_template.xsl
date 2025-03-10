@@ -15,6 +15,9 @@
                     <xsl:text> subpage</xsl:text>
                 </xsl:if>
             </xsl:attribute>
+            <xsl:attribute name="lang">
+                <xsl:text>en</xsl:text>
+            </xsl:attribute>
 
             <!--<html xmlns="http://www.w3.org/1999/xhtml" class="{$pagetype} {$subpagetype}">-->
 
@@ -77,65 +80,63 @@
                     </xsl:attribute>
                 </xsl:if>
 
-                <div class="pagewrap">
-                    <div id="header" class="header">
-                        <div class="header_inner">
-
-                            <!-- Link takes one back to home page by clicking title -->
-                            <h1>
-                                <a href="{$siteroot}">
-                                    <span class="trans">Trans</span>
-                                    <span class="dash">-</span>
-                                    <span class="mississippi">Mississippi</span>
-                                    <span class="and">&amp;</span>
-                                    <span class="i_e">International Exposition</span>
-                                </a>
-                            </h1>
-
-
-                            <form action="{$siteroot}search/all/" method="get"
-                                enctype="application/x-www-form-urlencoded">
-                                <input id="basic-q" type="text" name="q" value="" class="textField"/>
-                                <input type="submit" value="Search" class="submit"/>
-                            </form>
-
-                            <div id="nav" class="nav">
-                                <ul>
-                                    <li>
-                                        <a class="home" href="{$siteroot}">Home</a>
-                                    </li>
-                                    <li>
-                                        <a class="photographs" href="{$siteroot}photographs.html"
-                                            >Photographs</a>
-                                    </li>
-                                    <li>
-                                        <a class="memorabilia" href="{$siteroot}memorabilia.html"
-                                            >Memorabilia</a>
-                                    </li>
-                                    <li>
-                                        <a class="texts" href="{$siteroot}texts.html">Texts</a>
-                                    </li>
-                                    <li>
-                                        <a class="about" href="{$siteroot}about.html">About</a>
-                                    </li>
-                                </ul>
-
-                            </div>
-                            <!-- /nav -->
+                    <header id="header" class="header">
+                        <div class="page-wrapper">
+                          <div class="header_inner">
+                              <!-- Link takes one back to home page by clicking title -->
+                              <h1>
+                                  <a href="{$siteroot}">
+                                      <span class="trans">Trans</span>
+                                      <span class="dash">-</span>
+                                      <span class="mississippi">Mississippi</span>
+                                      <span class="and">&amp;</span>
+                                      <span class="i_e">International Exposition</span>
+                                  </a>
+                              </h1>
+                              <form action="{$siteroot}search/all/" method="get"
+                                  enctype="application/x-www-form-urlencoded">
+                                  <input id="basic-q" type="text" name="q" value="" class="textField"/>
+                                  <input type="submit" value="Search" class="submit"/>
+                              </form>
+                              <div id="nav" class="nav">
+                                  <ul>
+                                      <li>
+                                          <a class="home" href="{$siteroot}">Home</a>
+                                      </li>
+                                      <li>
+                                          <a class="photographs" href="{$siteroot}photographs.html"
+                                              >Photographs</a>
+                                      </li>
+                                      <li>
+                                          <a class="memorabilia" href="{$siteroot}memorabilia.html"
+                                              >Memorabilia</a>
+                                      </li>
+                                      <li>
+                                          <a class="texts" href="{$siteroot}texts.html">Texts</a>
+                                      </li>
+                                      <li>
+                                          <a class="about" href="{$siteroot}about.html">About</a>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <!-- /nav -->
+                          </div>
                         </div>
                         <!-- /header_inner -->
-                    </div>
+                    </header>
                     <!-- /header -->
 
-                    <div id="main" class="main">
+                    <main id="main" class="main">
 
-                        <!-- Invoke rules in page_templates.xsl -->
-                        <xsl:call-template name="mainContent"/>
+                        <div class="page-wrapper">
+                          <!-- Invoke rules in page_templates.xsl -->
+                          <xsl:call-template name="mainContent"/>
+                        </div>
 
-                    </div>
+                    </main>
                     <!-- /main -->
 
-                    <div id="footer" class="footer">
+                    <footer id="footer" class="footer">
 
                         <!-- Currently hidden until more sections are added -->
                         <!--<div class="nav">
@@ -145,34 +146,33 @@
                         </div>-->
                         <!-- /nav -->
 
-                        <div class="footerinfo">
-                            <p>Created by the <a href="http://cdrh.unl.edu">Center for Digital
-                                    Research in the Humanities</a>. <br/>Funding provided by the <a
-                                    href="http://www.unl.edu/plains/pha/pha.shtml">Plains Humanities
-                                    Alliance</a>, the <a href="http://www.unl.edu/plains/welcome"
-                                    >Center for Great Plains Studies</a>, and the <br/><a
-                                    href="http://research.unl.edu/">Office of Research and Economic
-                                    Development at the University of Nebraska–Lincoln</a>.
-                                <br/>Thanks to <a href="http://www.omahapubliclibrary.org/">Omaha
-                                    Public Library</a> and Jeffrey Spencer for use of
-                                collections.</p>
+                        <div class="page-wrapper">
+                          <div class="footerinfo">
+                              <p>Created by the <a href="http://cdrh.unl.edu">Center for Digital
+                                      Research in the Humanities</a>. <br/>Funding provided by the <a
+                                      href="http://www.unl.edu/plains/pha/pha.shtml">Plains Humanities
+                                      Alliance</a>, the <a href="http://www.unl.edu/plains/welcome"
+                                      >Center for Great Plains Studies</a>, and the <br/><a
+                                      href="http://research.unl.edu/">Office of Research and Economic
+                                      Development at the University of Nebraska–Lincoln</a>.
+                                  <br/>Thanks to <a href="http://www.omahapubliclibrary.org/">Omaha
+                                      Public Library</a> and Jeffrey Spencer for use of
+                                  collections.</p>
+                          </div>
+                          <!-- /footerinfo -->
+                          <div class="icons">
+                              <a href="http://www.omahapubliclibrary.org/">
+                                  <img src="{$siteroot}files/template/opl_logo.png" class="right"/>
+                              </a>
+                              <a href="http://www.unl.edu/">
+                                  <img src="{$siteroot}files/template/unl_logo.png" class="right"/>
+                              </a>
+                          </div>
+                          <!-- /icons -->
                         </div>
-                        <!-- /footerinfo -->
 
-                        <div class="icons">
-                            <a href="http://www.omahapubliclibrary.org/">
-                                <img src="{$siteroot}files/template/opl_logo.png" class="right"/>
-                            </a>
-                            <a href="http://www.unl.edu/">
-                                <img src="{$siteroot}files/template/unl_logo.png" class="right"/>
-                            </a>
-                        </div>
-                        <!-- /icons -->
-
-                    </div>
+                    </footer>
                     <!-- /footer -->
-                </div>
-                <!-- /pagewrap -->
             </body>
             <!--</html>-->
 
