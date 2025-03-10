@@ -61,14 +61,14 @@
 
             <xsl:choose>
                 <!-- Keyword display pages -->
-                <xsl:when test="$fq != ''"><h2><xsl:value-of select="functx:words-to-camel-case($pagetype)"/> with <xsl:value-of select="translate($fq, ':', ' ')"/></h2></xsl:when>
+                <xsl:when test="$fq != ''"><h1><xsl:value-of select="functx:words-to-camel-case($pagetype)"/> with <xsl:value-of select="translate($fq, ':', ' ')"/></h1></xsl:when>
                 <!-- Pages powered by SOLR search -->
                 <xsl:when test="$subpagetype != ''">
-                    <h2>
+                    <h1>
                         <xsl:value-of select="functx:words-to-camel-case(translate($pagetype, '_', ' '))"/>
                         <xsl:text> - </xsl:text>
                         <xsl:value-of select="functx:words-to-camel-case(translate($subpagetype, '_', ' '))"/>
-                    </h2>
+                    </h1>
                 </xsl:when>
                 <!-- main pages -->
 
@@ -159,7 +159,7 @@
                 </xsl:when>
                 <!-- Display texts using XSL on the TEI files -->
                 <xsl:otherwise>
-                    <h2><xsl:value-of select="//title[@type='main'][1]"/></h2>
+                    <h1><xsl:value-of select="//title[@type='main'][1]"/></h1>
                     <!-- metadata for texts section -->
                     <ul class="callout">    
                         <!--Subtitle: <title level="a" type="sub"/>-->
@@ -241,7 +241,7 @@
         
         <xsl:if test="$pagetype = 'search'">
             
-            <h2>Search Results</h2>
+            <h1>Search Results</h1>
             
             <xsl:call-template name="search-generated-page"/>
             
@@ -735,7 +735,7 @@
         <!-- Set the xpath default namespace because SOLR results don't have a namespace -->
         <xsl:for-each select="document($solrsearchurl)">
             
-            <h2>Title: <xsl:value-of select="/response/result/doc/str[@name='title']"/></h2>
+            <h1>Title: <xsl:value-of select="/response/result/doc/str[@name='title']"/></h1>
             
             <!-- List all the descriptors present (do not show if not present) -->
             <ul class="callout">
@@ -802,7 +802,19 @@
                     </xsl:call-template>
                 </xsl:when>
                 <xsl:otherwise>
-                    <img src="{$externalfileroot}large/{/response/result/doc/str[@name='id']}.jpg"/>
+                    <img src="{$externalfileroot}large/{/response/result/doc/str[@name='id']}.jpg">
+                        <xsl:attribute name="alt">
+                            <xsl:choose>
+                                <xsl:when test="/response/result/doc/str[@name='description']">
+                                    <xsl:value-of select="/response/result/doc/str[@name='description']"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:value-of select="/response/result/doc/str[@name='title']"/>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </xsl:attribute>
+                    </img>
+
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:for-each>
